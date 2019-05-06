@@ -5,7 +5,7 @@
       <fileDesc>
          <titleStmt>
             <title xml:lang="eng" type="main">Encoded Archival Description <lb/>Tag Library </title>
-            <title xml:lang="eng" type="additional">Version EAD3 1.1.0</title>
+            <title xml:lang="eng" type="additional">Version EAD3 1.1.1</title>
             <respStmt xml:lang="eng">
                <resp>Prepared and maintained by the</resp>
                <name>Technical Subcommittee for Encoded Archival Standards of the Society of American Archivists</name>
@@ -49,11 +49,11 @@
          <titlePage>
             <docTitle>
                <titlePart type="main">Encoded Archival Description <lb/>Tag Library</titlePart>
-               <titlePart type="additional">Version EAD3 1.1.0</titlePart>
+               <titlePart type="additional">Version EAD3 1.1.1</titlePart>
             </docTitle>
             <docEdition>Edition 2018</docEdition>
             <note>
-               <p>This tag library represents version EAD3 1.1.0 of the Encoded Archival Description schemas, released in April 2018. It supersedes the Version EAD3 1.0.0 tag library published in 2015.</p>
+               <p>This tag library represents version EAD3 1.1.1 of the Encoded Archival Description schemas, released in May 2019. It supersedes the Version EAD3 1.1.0 tag library published in 2018.</p>
                <p>The SAA Technical Subcommittee for Encoded Archival Standards is responsible for updating and editing the EAD schemas and tag library.</p>
                <p>The Network Development and MARC Standards Office of the Library of Congress serves as the host for online EAD documentation, including storage and delivery of electronic files and maintenance of the
                   EAD web site, located at <ref target="http://www.loc.gov/ead/">http://www.loc.gov/ead/</ref>. </p>
@@ -12947,7 +12947,7 @@
                      <gi>rightsdeclaration</gi>
                   </head>
                   <div type="fullName">
-                     <p xml:lang="eng">Rights Declaration (revised in 1.1.0)</p>
+                     <p xml:lang="eng">Rights Declaration (revised in 1.1.1)</p>
                   </div>
                   <div type="summary">
                      <p>An optional child element of <gi>control</gi> that indicates a standard rights statement associated with the EAD instance.</p>
@@ -12983,7 +12983,7 @@
                         such as Creative Commons, RightsStatements.org, and published locally-defined licenses.</p>
                      <p><gi>abbr</gi> may be used to provide the abbreviated name for the rights statement. The value of <gi>abbr</gi> should align with the rights statements referenced by <gi>citation</gi> and
                            <gi>descriptivenote</gi>.</p>
-                     <p><gi>citation</gi> must be used to provide a machine-readable reference to a license statement (for example, a dereferenceable URI).</p>
+                     <p><gi>citation</gi> must be used to provide a machine-readable reference to a license statement (for example, a dereferenceable URI). It may also be used to encode the name of the license statement. <gi>descriptivenote</gi> may be used to provide additional, human-readable description or explanation of the license statement.</p>
                      <p><gi>descriptivenote</gi> may be used to provide a human-readable description of the license statement.</p>
                   </div>
                   <div type="seealso">
@@ -13000,8 +13000,10 @@
                      <ead:control>
                         <ead:rightsdeclaration>
                            <ead:abbr>CC0</ead:abbr>
-                           <ead:citation href="https://creativecommons.org/publicdomain/zero/1.0/"/>
-                           <ead:descriptivenote>CC0 1.0 Universal (CC0 1.0)</ead:descriptivenote>
+                           <ead:citation href="https://creativecommons.org/publicdomain/zero/1.0/">CC0 1.0 Universal (CC0 1.0)</ead:citation>
+                           <ead:descriptivenote>
+                              <p>This work has been dedicated to the public domain, meaning that you can copy, modify, distribute and perform the work, even for commercial purposes, all without asking permission.</p>
+                           </ead:descriptivenote>
                         </ead:rightsdeclaration>
                      </ead:control>
                   </egXML>
@@ -16414,6 +16416,15 @@
          </div>
          <div type="appendix" xml:id="appendixC">
             <head>Appendix C: Revision History</head>
+            <div>
+               <!--<p>EAD3 1.1.1 (2019 May)</p>-->
+               <p>
+                  <list type="ordered">
+                     <head>EAD3 1.1.1 (2019 May)</head>
+                     <item>Expanded Description and Usage and Example of rightsdeclaration.</item>
+                  </list>
+               </p>
+            </div>
             <div>
                <!--<p>EAD3 1.1.0 (2018 April)</p>-->
                <p>
