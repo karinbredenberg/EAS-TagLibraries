@@ -2,7 +2,7 @@
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
     xmlns:fo="http://www.w3.org/1999/XSL/Format" 
     xmlns:eac-cpf="urn:isbn:1-931666-33-4"
-    xmlns:ead="urn:isbn:1-931666-22-9" 
+    xmlns:ead="http://ead3.archivists.org/schema/" 
     xmlns:premis="http://www.loc.gov/premis/v3"
     xmlns:ex="http://www.tei-c.org/ns/Examples"
     xmlns:eg="http://www.tei-c.org/ns/Examples"
@@ -1459,13 +1459,13 @@
                     <xsl:choose>
                         <xsl:when test="eg:egXML">
                             <xsl:for-each select="eg:egXML">
-                        <fo:block font-family="monospace" font-size="10pt">
-                            <xsl:apply-templates/>
-                        </fo:block>
-                    </xsl:for-each>
-                    <fo:block>
-                        <xsl:call-template name="newLine"/>
-                    </fo:block>
+                                <fo:block font-family="monospace" font-size="10pt">
+                                    <xsl:apply-templates/>
+                                </fo:block>
+                            </xsl:for-each>
+                            <fo:block>
+                                <xsl:call-template name="newLine"/>
+                            </fo:block>
                         </xsl:when>
                         <xsl:otherwise>
                             <fo:block>
@@ -1473,7 +1473,6 @@
                             </fo:block>
                         </xsl:otherwise>
                     </xsl:choose>
-                    
                 </fo:list-item-body>
             </fo:list-item>
         </fo:list-block>
